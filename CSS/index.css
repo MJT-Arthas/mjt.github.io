@@ -26,9 +26,70 @@
     float: left;
 }
 
+.app-code {
+		position: absolute;
+		/* display: none; */
+		height: 0px;
+    width: 124px;
+    background-color: #fff;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		left: -38px;
+		top: 40px;
+		overflow: hidden;
+		
+		transition: height 0.3s;
+}
+
+.topbar-download:hover .app-code{
+		display: block;
+		height: 148px;
+	/* 	overflow: visible; */
+}
+.topbar-download:hover .triangle{
+		display: block;
+}
+
+.topbar-download{
+		position: relative;
+}
+
+.triangle{
+	display: none;
+}
+
+.triangle::after {
+		float: left;
+		position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color:white;
+    top:32px;
+		left: 16px;
+		z-index: 20;
+}
+
+
+.topbar-download .app-code img {
+    width: "90px";
+    height:"90px"; 
+    margin: 16px 17px 11px 17px;
+}
+
+.topbar-download span {
+    color: #000;
+    font-size: 15px;
+		margin-bottom: 20px;
+}
+
 .shop-cart,
 .user-info{
     float: right;
+    position: relative;
 }
 
 .shop-cart a {
@@ -44,4 +105,34 @@
 .shop-cart i {
     margin-right: 4px;
     font-size: 20px;
+}
+
+.shop-cart:hover .cart-bar{
+    height: 100px;
+}
+
+.cart-bar {
+    position: absolute;
+	/* display: none; */
+	height: 0px;
+    width: 316px;
+    background-color: white;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	right: 0px;
+	top: 40px;
+	overflow: hidden;
+		
+	transition: height 0.3s;
+}
+
+.cart-bar-txt {
+    font-size:13px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 0;
+    right: 0;
+
 }
