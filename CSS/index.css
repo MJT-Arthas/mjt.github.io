@@ -42,7 +42,8 @@
 		transition: height 0.3s;
 }
 
-.topbar-download:hover .app-code{
+.topbar-download:hover .app-code,
+.app-code:hover{
 		display: block;
 		height: 148px;
 	/* 	overflow: visible; */
@@ -52,7 +53,8 @@
 }
 
 .topbar-download{
-		position: relative;
+        position: relative;
+        z-index: 9999;
 }
 
 .triangle{
@@ -90,6 +92,7 @@
 .user-info{
     float: right;
     position: relative;
+    z-index: 9999;
 }
 
 .shop-cart a {
@@ -107,7 +110,8 @@
     font-size: 20px;
 }
 
-.shop-cart:hover .cart-bar{
+.shop-cart:hover .cart-bar,
+.cart-bar:hover{
     height: 100px;
 }
 
@@ -134,5 +138,159 @@
     margin-top: -10px;
     left: 0;
     right: 0;
+}
 
+.site-header {
+    position: relative;
+}
+
+.header-bar {
+    height: 100px;
+    /* background-color: salmon; */
+}
+
+.header-bar .logo {
+    float: left;
+    margin-top: 22px;
+    height: 55px;
+    width: 55px;
+    position: relative;
+    overflow: hidden;
+}
+.header-bar .logo a {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    background-color:#FF6700;
+    transition: left 0.3s;
+}
+.header-bar .mi {
+    position: absolute;
+    left: 0;
+    background-image: url(../img/小米logo.png);
+    background-position: center;
+}
+
+.header-bar .home {
+    left: -55px;
+    position: absolute;
+}
+
+
+.header-bar .home i{
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    color: white;
+}
+
+.header-bar .logo:hover .mi{
+    left: 55px;
+}
+.header-bar .logo:hover .home{
+    left: 0px;
+}
+
+/* 中间导航条 */
+.header-navbar {
+    float: left;
+    width: 850px;
+    /* background-color: yellow; */
+    line-height: 100px;
+    margin-left: 7px;
+}
+
+.header-navbar .nav{
+    margin-left: 58px;
+    height: 100px;
+}
+
+.header-navbar li {
+    float: left;
+}
+.header-navbar li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.all-goods {
+    visibility: hidden;
+}
+
+.header-navbar li a:hover {
+    color: #ff6700;
+}
+
+
+
+.header-navbar .goods-info {
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    /* background-color: #bfa; */
+    top: 100px;
+    left: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+    z-index: 999;
+}
+
+/* .header-navbar li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(9)):hover ~.goods-info, */
+.header-navbar .show:hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgb(224, 224,224);
+}
+/* 搜索框 */
+.search-wrapper {
+    float: right;
+    width: 296px;
+    height: 50px;
+    margin-top: 25px;
+
+}
+
+.search-wrapper .search-inp {
+    box-sizing: border-box;
+    float: left;
+    padding: 0;
+    border: none;
+    height: 50px;
+    width: 244px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224,224);
+    outline: none;
+}
+
+.search-wrapper .search-inp:hover, 
+.search-wrapper .search-inp:hover + button{
+    border-color: lightslategray;
+}
+
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button{
+    border-color: #ff6700;
+}
+
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+}
+
+.search-wrapper .search-btn {
+    float: left;
+    height: 50px;
+    width: 52px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    color: #616161;
+    font-size: 17px;
+    border: 1px solid rgb(224, 224,224);
+    border-left: none;
 }
