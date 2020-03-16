@@ -295,3 +295,30 @@
     border-left: none;
     outline: none;
 }
+
+/* 内容区 */
+.content-bar {
+    height: 460px;
+    width: 1226px;
+    background-color: rgba(0, 0,255, 0.7);
+    background-image: url(../img/轮播图1.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.content-nav {
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    color: #fff;
+}
+
+.content-nav ul {
+    margin: 20px 0px 20px 30px;
+}
+
+.content-nav a {
+    line-height: 42px;
+    color: white;
+}
