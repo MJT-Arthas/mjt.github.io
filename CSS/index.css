@@ -265,11 +265,21 @@
     outline: none;
 }
 
+.search {
+    height: 50px;
+}
+
+.search:hover .search-inp{
+    border-color: lightslategray;
+}
+.search:hover .search-btn{
+    border-color: lightslategray;
+}
+
 .search-wrapper .search-inp:hover, 
 .search-wrapper .search-inp:hover + button{
     border-color: lightslategray;
 }
-
 
 .search-wrapper .search-inp:focus,
 .search-wrapper .search-inp:focus + button{
@@ -279,7 +289,7 @@
 .search-wrapper .search-btn:hover{
     background-color: #ff6700;
     color: #fff;
-    border: none;
+    /* border: none; */
 }
 
 .search-wrapper .search-btn {
@@ -294,6 +304,7 @@
     border: 1px solid rgb(224, 224,224);
     border-left: none;
     outline: none;
+    transition: background-color 0.3s;
 }
 
 /* 内容区 */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片切换</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+        }
+        div {
+            background-color: rgb(181, 104, 226);
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+        #info {
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var last = document.getElementById("last");
+            var next = document.getElementById("next");
+            var img = document.getElementsByTagName("img")[0];
+            var imgArr = ["../小米官网/img/1.jpg",
+                        "../小米官网/img/2.jpg",
+                        "../小米官网/img/3.jpg",
+                        "../小米官网/img/4.jpg",
+                        "../小米官网/img/5.jpg",
+                        "../小米官网/img/6.jpg",];
+            var index = 0 ;
+            var info = document.getElementById("info");
+            info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
+
+            last.onclick = function(){
+                index--;
+                if(index < 0 ){
+                    index = imgArr.length - 1;
+                }
+                img.src = imgArr[index];
+                info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
+    
+            };
+            next.onclick = function(){
+                index++;
+                if(index > imgArr.length - 1){
+                    index = 0;
+                }
+                img.src = imgArr[index];
+                info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
+
+            };
+            
+        };
+    </script>
+</head>
+<body>
+    <div>
+        <p id="info"></p>
+        <img src="../小米官网/img/1.jpg" alt="" style="width: 600px;height: 400px;background-size:cover">
+        <button id="last">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+
+
+
+
+</body>
+</html>
