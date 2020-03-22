@@ -26,12 +26,12 @@
             var last = document.getElementById("last");
             var next = document.getElementById("next");
             var img = document.getElementsByTagName("img")[0];
-            var imgArr = ["../小米官网/img/1.jpg",
-                        "../小米官网/img/2.jpg",
-                        "../小米官网/img/3.jpg",
-                        "../小米官网/img/4.jpg",
-                        "../小米官网/img/5.jpg",
-                        "../小米官网/img/6.jpg",];
+            var imgArr = ["img/1.jpg",
+                        "img/2.jpg",
+                        "img/3.jpg",
+                        "img/4.jpg",
+                        "img/5.jpg",
+                        "img/6.jpg",];
             var index = 0 ;
             var info = document.getElementById("info");
             info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
@@ -61,7 +61,7 @@
 <body>
     <div>
         <p id="info"></p>
-        <img src="../小米官网/img/1.jpg" alt="" style="width: 600px;height: 400px;background-size:cover">
+        <img src="img/1.jpg" alt="" style="width: 600px;height: 400px;background-size:cover">
         <button id="last">上一张</button>
         <button id="next">下一张</button>
     </div>
