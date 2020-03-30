@@ -62,15 +62,18 @@
             var index = 0
 
             allA[index].style.backgroundColor = "black";
-            
+            var timer;
             for(i=0; i<allA.length; i++){
                 allA[i].num = i;
                 allA[i].onclick = function(){
+
+                    clearInterval(timer);
+
                     index = this.num;
                     setA();
                     //使用move切换
                     move(imgList,"left",-620*index,20,function(){
-                        
+                        autoChange();
                     });
                 };
             }
@@ -130,7 +133,7 @@
             
             function autoChange(){//自动轮播
                 //var timer = null;
-                var timer = setInterval(function(){
+                timer = setInterval(function(){
                     index++;
                     index %= imgArr.length;//取模回到开始
                     move(imgList,"left",-620*index,20,function(){
