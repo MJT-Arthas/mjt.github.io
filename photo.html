@@ -35,7 +35,16 @@
             var index = 0 ;
             var info = document.getElementById("info");
             info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
-
+            // 计时器
+            setInterval(function(){
+                index++;
+                if(index > imgArr.length - 1){
+                    index = 0;
+                }
+                img.src = imgArr[index];
+                info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
+            },2000);
+            //上一张
             last.onclick = function(){
                 index--;
                 if(index < 0 ){
@@ -43,7 +52,7 @@
                 }
                 img.src = imgArr[index];
                 info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
-    
+            //下一张
             };
             next.onclick = function(){
                 index++;
@@ -52,7 +61,7 @@
                 }
                 img.src = imgArr[index];
                 info.innerHTML ="共 "+ imgArr.length +" 张"+"   "+"第 "+ (index+1) +" 张" ;
-
+                
             };
             
         };
