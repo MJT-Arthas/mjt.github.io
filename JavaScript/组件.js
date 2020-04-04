@@ -1,7 +1,6 @@
 window.onload=function(){
+    // 轮播图-------------------------------------------------------------------------------------开始
     let swiper = document.querySelector(".swiper"),
-    
-    
     pre = swiper.querySelector(".pre"),
         next = swiper.querySelector(".next"),
         _ul = swiper.querySelector(".imgBox"),//图片ul
@@ -24,7 +23,6 @@ window.onload=function(){
     
     //初始化图片队列：
     _ul.style.transform="translateX("+(-imgW*index)+"px)";
-
     //点击右边按钮
     next.addEventListener("click",()=>{
         if(isTransitioned){
@@ -32,8 +30,7 @@ window.onload=function(){
             move();
             smallDot(index);  
         }
-    })
-    
+    });
     
     //点击左边按钮
     pre.addEventListener("click",()=>{
@@ -42,7 +39,7 @@ window.onload=function(){
             move();
             smallDot(index);
         }
-    })
+    });
     
     setInterval(function(){
         if(isTransitioned){
@@ -50,7 +47,7 @@ window.onload=function(){
             move();
             smallDot(index);
         }
-    },4000)
+    },4000);
     
     //监听动画结束
     _ul.addEventListener("transitionend",()=>{//给ul加了transi
@@ -103,4 +100,8 @@ window.onload=function(){
         _ul.style.transform="translateX("+(-imgW*index)+"px)";
         isTransitioned = false;
     }
-}
+// 轮播图-------------------------------------------------------------------------------------结束
+
+
+
+};

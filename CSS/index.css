@@ -236,12 +236,10 @@
     z-index: 999;
 }
 
-/* .header-navbar li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(9)):hover ~.goods-info, */
 .header-navbar .show:hover ~ .goods-info,
 .goods-info:hover{
     height: 228px;
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
-    /* border-top: 1px solid rgb(224, 224,224); */
     background-color: #fff;
     opacity: 0.9;
 }
@@ -369,7 +367,7 @@
     background-color: #ff6700;
 }
 
-/* 轮播图CSS */
+/* 轮播图-------------------------------------------------------------------------------------开始 */
 .swiper{
     width: 1226px;
     height: 460px;
@@ -451,3 +449,4 @@ li img {
     width: 1227px;
     height: 460px;
 }
+/* 轮播图-------------------------------------------------------------------------------------结束 */
