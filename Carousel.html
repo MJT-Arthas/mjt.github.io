@@ -77,7 +77,7 @@
                     });
                 };
             }
-            autoChange();
+            autoChange();//自动运行
 
             function setA(){//按钮变色模块
                 if(index>= imgArr.length-1){
@@ -90,7 +90,11 @@
                 allA[index].style.backgroundColor = "black";
             };
 
+            
+                
+
             function move(obj, attr, target, speed,callback){//move工具
+                
             // 参数：
             // obj:要执行对象
             //attr:修改动画的样式
@@ -134,22 +138,32 @@
             function autoChange(){//自动轮播
                 //var timer = null;
                 timer = setInterval(function(){
-                    index++;
-                    index %= imgArr.length;//取模回到开始
-                    move(imgList,"left",-620*index,20,function(){
-                        setA();
-                    });
+                        index++;
+                        index %= imgArr.length;//取模回到开始
+                        move(imgList,"left",-620*index,20,function(){
+                            setA();
+                        });
+                        
+                    },3000);
+                //鼠标hover暂停
+                // outer.onmouseover = function(){
+                //     clearInterval(timer);
+                //     //alert("移入了")
+                // }
+                // outer.onmouseout = function(){
                     
-                },3000);
-                for(i=0; i<imgArr.length; i++){//鼠标hover暂停
-                    imgArr[i].onmouseover = function(){
-                        clearInterval(timer);
-                    }
-                    imgArr[i].onmouseout = function(){
-                        autoChange();
-                    }
-                
-                }
+                //     //alert("移开了")
+                //     timer = setInterval(function(){
+                //         index++;
+                //         index %= imgArr.length;//取模回到开始
+                //         move(imgList,"left",-620*index,20,function(){
+                //             setA();
+                //         });
+                        
+                //     },3000);
+                // }
+
+
             };
 
             

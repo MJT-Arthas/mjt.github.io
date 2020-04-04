@@ -241,7 +241,9 @@
 .goods-info:hover{
     height: 228px;
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgb(224, 224,224);
+    /* border-top: 1px solid rgb(224, 224,224); */
+    background-color: #fff;
+    opacity: 0.9;
 }
 /* 搜索框 */
 .search-wrapper {
@@ -312,7 +314,7 @@
     height: 460px;
     width: 1226px;
     background-color: rgba(0, 0,255, 0.7);
-    background-image: url(../img/轮播图1.jpg);
+    /* background-image: url(../img/轮播图1.jpg); */
     background-size: 100%;
     background-position: center;
 }
@@ -326,6 +328,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     font-size: 14px;
     color: #fff;
+    z-index: 100;
 
 }
 
@@ -364,4 +367,87 @@
 .content-nav ul li a:hover {
     color: white;
     background-color: #ff6700;
+}
+
+/* 轮播图CSS */
+.swiper{
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.swiper ul{
+    width: 9999px;
+    overflow: hidden;
+    /*清除浮动*/
+    /*transition: 1s;*/
+}
+.swiper li{
+    float: left;
+    /*width: 520px;*/
+    position: relative;
+}
+/*按钮*/
+div.btn {
+    position: absolute;
+    top: 50%;
+    left: 234px;
+    width: 30px;
+    height: 70px;
+    
+    margin-top: -15px;
+    text-align: center;
+    line-height: 70px;
+    /* border-radius: 50%; */
+    font-size: 40px;
+    color:gray;
+    /* background: white;
+    opacity: .5; */
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+div.btn.next {
+    left: 1196px;
+}
+
+div.btn:hover {
+    background: gray;
+    color: white;
+}
+
+.transi{
+    transition: 500ms;
+}
+/*小圆点*/
+ul.item{
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /*清除浮动*/
+    overflow: hidden;
+    z-index: 1000;
+}
+.item li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    background-color: mediumturquoise;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.item li:hover{
+    border: 1px solid gray;
+    cursor:pointer
+}
+li.active{
+    background: gray;
+}
+li img {
+    width: 1227px;
+    height: 460px;
 }
