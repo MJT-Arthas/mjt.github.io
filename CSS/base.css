@@ -1,3 +1,6 @@
+/* 灰屏
+html {-webkit-filter: grayscale(100%);
+} */
 /* 公共样式 */
 .clearfix::before,
 .clearfix::after {
